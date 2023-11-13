@@ -5,8 +5,6 @@ import './Content.css'
 import { useRef } from 'react'
 import { useObserver } from '../hooks/useObserver.js'
 
-/* const Proyects = React.lazy(() => import('./Proyects.jsx').then((module) =>  ({ default: module.Proyects }) )) */
-
 const Proyects = React.lazy(async () => {
     await new Promise(resolve => setTimeout(resolve, 2000))
     const module = await import('./Proyects.jsx')
@@ -15,15 +13,13 @@ const Proyects = React.lazy(async () => {
 
 export function Content () {
     const containerRefHome = useRef(null)
-    const containerRefProyects = useRef(null)
     const [ isVisibleHome ] = useObserver(containerRefHome)
-    const [ isVisibleProyects ] = useObserver(containerRefProyects)
 
     return (
         <>
             <main>
                 <div></div>
-                <section className='px-24 py-14 bg-[url("https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg")] bg-cover' id='home'>
+                <section className='px-24 py-14 bg-gradient-to-br from-[#014a81]' id='home'>
                     <div ref={containerRefHome} className='flex py-6' >
                         <h2 className='text-5xl cursor-pointer hover:border-b-2 hover:border-[#fb0c06]'>Inicio</h2>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 justify-end">
@@ -46,21 +42,28 @@ export function Content () {
                     </div>
                     <p className='text-end text-xl py-4'>Tengo <strong className='text-[#fb0c06]'>2+</strong> años de experiencia como <strong className='text-yellow-400'>FullStack Developer</strong>, tengo la capacidad de desarrollar tanto el <strong className='text-blue-700 border-b-2 border-blue-700'>frontend</strong> como el <strong className='text-[#fb0c06] border-b-2 border-[#fb0c06]'>backend</strong> de las aplicaciones web, utilizando diferentes lenguajes, frameworks y herramientas.</p>
                 </section>
-                <div></div>
-                <section ref={containerRefProyects} className='px-24 py-14 bg-[url("https://images.pexels.com/photos/3913025/pexels-photo-3913025.jpeg")] bg-cover' id='projects'>
+                <div className='bg-gradient-to-b from-[#014a81]'></div>
+                <section className='px-24 py-14 bg-gradient-to-tr from-[#014a81]' id='projects'>
                     <div className='flex py-6'>
                         <h2 className='text-5xl cursor-pointer hover:border-b-2 hover:border-[#fb0c06]'>Proyectos</h2>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 justify-end">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 4.5l-15 15m0 0h11.25m-11.25 0V8.25" />
                         </svg>
                     </div>
-
                     <div className='grid grid-cols-2 gap-2 py-6'>
-                        <Suspense fallback={<div>Loading...</div>}><Proyects title="Titulo bonito" description="lorem ipsum"></Proyects></Suspense>
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <Proyects title="Titulo bonito" description="lorem ipsum"></Proyects>
+                        </Suspense>
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <Proyects title="Titulo bonito" description="lorem ipsum" invert={false}></Proyects>
+                        </Suspense>
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <Proyects title="Titulo bonito" description="lorem ipsum"></Proyects>
+                        </Suspense>
                     </div>
                 </section>
                 <div></div>
-                <section className='px-24 py-10' id='about'>
+                <section className='px-24 py-10 bg-gradient-to-br from-[#014a81]' id='about'>
                     <CarouselCustomNavigation></CarouselCustomNavigation>
                 </section>
                 <div></div>
