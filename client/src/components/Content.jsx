@@ -1,8 +1,17 @@
+import React, { Suspense } from 'react'
 import { CarouselCustomNavigation } from './Carousel.jsx'
 import { FooterWithSocialLinks } from './Footer.jsx'
 import './Content.css'
 import { useRef } from 'react'
 import { useObserver } from '../hooks/useObserver.js'
+
+/* const Proyects = React.lazy(() => import('./Proyects.jsx').then((module) =>  ({ default: module.Proyects }) )) */
+
+const Proyects = React.lazy(async () => {
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    const module = await import('./Proyects.jsx')
+    return ({ default: module.Proyects })
+});
 
 export function Content () {
     const containerRefHome = useRef(null)
@@ -38,8 +47,8 @@ export function Content () {
                     <p className='text-end text-xl py-4'>Tengo <strong className='text-[#fb0c06]'>2+</strong> años de experiencia como <strong className='text-yellow-400'>FullStack Developer</strong>, tengo la capacidad de desarrollar tanto el <strong className='text-blue-700 border-b-2 border-blue-700'>frontend</strong> como el <strong className='text-[#fb0c06] border-b-2 border-[#fb0c06]'>backend</strong> de las aplicaciones web, utilizando diferentes lenguajes, frameworks y herramientas.</p>
                 </section>
                 <div></div>
-                <section className='px-24 py-14 bg-[url("https://images.pexels.com/photos/3913025/pexels-photo-3913025.jpeg")] bg-cover' id='projects'>
-                    <div ref={containerRefProyects} className='flex py-6'>
+                <section ref={containerRefProyects} className='px-24 py-14 bg-[url("https://images.pexels.com/photos/3913025/pexels-photo-3913025.jpeg")] bg-cover' id='projects'>
+                    <div className='flex py-6'>
                         <h2 className='text-5xl cursor-pointer hover:border-b-2 hover:border-[#fb0c06]'>Proyectos</h2>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 justify-end">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 4.5l-15 15m0 0h11.25m-11.25 0V8.25" />
@@ -47,27 +56,7 @@ export function Content () {
                     </div>
 
                     <div className='grid grid-cols-2 gap-2 py-6'>
-                        <div className='cursor-pointer'>
-                            <img className='rounded-full' src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg" alt="example" />
-                        </div>
-                        <div className='flex flex-col justify-center align-middle items-center p-4'>
-                            <h3 className='text-2xl'>Titulo de proyecto</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, atque?</p>
-                        </div>
-                        <div className='flex flex-col justify-center align-middle items-center p-4'>
-                            <h3 className='text-2xl'>Titulo de proyecto</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, atque?</p>
-                        </div>
-                        <div className='cursor-pointer'>
-                            <img src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg" alt="example" />
-                        </div>
-                        <div className='cursor-pointer'>
-                            <img className='rounded-full' src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg" alt="example" />
-                        </div>
-                        <div className='flex flex-col justify-center align-middle items-center p-4'>
-                            <h3 className='text-2xl'>Titulo de proyecto</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, atque?</p>
-                        </div>
+                        <Suspense fallback={<div>Loading...</div>}><Proyects title="Titulo bonito" description="lorem ipsum"></Proyects></Suspense>
                     </div>
                 </section>
                 <div></div>
