@@ -1,4 +1,5 @@
 import { Carousel, Typography } from "@material-tailwind/react";
+import Exercises from '../images/front.jpg'
 
 export function CarouselCustomNavigation() {
   return (
@@ -51,7 +52,7 @@ export function CarouselCustomNavigation() {
 
       <div className="relative h-[550px] w-full">        
         <img
-          src="../assets/images/front.jpg"
+          src={Exercises}
           alt="image 2"
           className="h-full w-full object-cover"
         />

@@ -1,6 +1,8 @@
 import React, { Suspense } from 'react'
 import { CarouselCustomNavigation } from './Carousel.jsx'
 import { FooterWithSocialLinks } from './Footer.jsx'
+import Avatar from '../images/avatar.jpg'
+import Proyect1 from '../images/proyect1.png'
 import './Content.css'
 import { useRef } from 'react'
 import { useObserver } from '../hooks/useObserver.js'
@@ -38,7 +40,7 @@ export function Content () {
                                 </svg>
                             </div>
                         </span>
-                        <img className={ isVisibleHome ? 'jello-horizontal block w-72 rounded-full justify-end' : 'block w-72 rounded-full justify-end'} src="../assets/images/avatar.jpg" alt="My avatar generated with: https://www.lightxeditor.com" />
+                        <img className={ isVisibleHome ? 'jello-horizontal block w-72 rounded-full justify-end' : 'block w-72 rounded-full justify-end'} src={Avatar} alt="My avatar generated with: https://www.lightxeditor.com" />
                     </div>
                     <p className='text-end text-xl py-4'>Tengo <strong className='text-[#fb0c06]'>2+</strong> años de experiencia como <strong className='text-yellow-400'>FullStack Developer</strong>, tengo la capacidad de desarrollar tanto el <strong className='text-blue-700 border-b-2 border-blue-700'>frontend</strong> como el <strong className='text-[#fb0c06] border-b-2 border-[#fb0c06]'>backend</strong> de las aplicaciones web, utilizando diferentes lenguajes, frameworks y herramientas.</p>
                 </section>
@@ -52,7 +54,7 @@ export function Content () {
                     </div>
                     <div className='grid grid-cols-2 gap-2 py-6'>
                         <Suspense fallback={<div>Loading...</div>}>
-                            <Proyects title="Titulo bonito" description="lorem ipsum"></Proyects>
+                            <Proyects title="Tienda con Carrito React + Vite" description="" src={Proyect1} link={'https://willowy-mermaid-f58654.netlify.app'}></Proyects>
                         </Suspense>
                         <Suspense fallback={<div>Loading...</div>}>
                             <Proyects title="Titulo bonito" description="lorem ipsum" invert={false}></Proyects>
