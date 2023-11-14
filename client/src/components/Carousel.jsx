@@ -51,7 +51,7 @@ export function CarouselCustomNavigation() {
 
       <div className="relative h-[550px] w-full">        
         <img
-          src="../../front.jpg"
+          src="../assets/images/front.jpg"
           alt="image 2"
           className="h-full w-full object-cover"
         />

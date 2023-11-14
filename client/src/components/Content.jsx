@@ -38,7 +38,7 @@ export function Content () {
                                 </svg>
                             </div>
                         </span>
-                        <img className={ isVisibleHome ? 'jello-horizontal block w-72 rounded-full justify-end' : 'block w-72 rounded-full justify-end'} src="../../avatar.jpg" alt="My avatar generated with: https://www.lightxeditor.com" />
+                        <img className={ isVisibleHome ? 'jello-horizontal block w-72 rounded-full justify-end' : 'block w-72 rounded-full justify-end'} src="../assets/images/avatar.jpg" alt="My avatar generated with: https://www.lightxeditor.com" />
                     </div>
                     <p className='text-end text-xl py-4'>Tengo <strong className='text-[#fb0c06]'>2+</strong> años de experiencia como <strong className='text-yellow-400'>FullStack Developer</strong>, tengo la capacidad de desarrollar tanto el <strong className='text-blue-700 border-b-2 border-blue-700'>frontend</strong> como el <strong className='text-[#fb0c06] border-b-2 border-[#fb0c06]'>backend</strong> de las aplicaciones web, utilizando diferentes lenguajes, frameworks y herramientas.</p>
                 </section>
