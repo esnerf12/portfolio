@@ -29,4 +29,8 @@ a:hover {
 
 .slide-left:hover{animation:slide-left 0.1s linear both}@keyframes slide-left{0%{transform:translateX(0)}100%{transform:translateX(-25px)}}
 
-.shadow-drop-left{animation:shadow-drop-left 0.4s linear both} @keyframes shadow-drop-left{0%{box-shadow:0 0 0 0 transparent}100%{box-shadow:-12px 0 20px -12px rgb(255, 255, 255)}}
+.slide-right:hover{animation:slide-right 0.1s linear both}@keyframes slide-right{0%{transform:translateX(0)}100%{transform:translateX(25px)}}
+
+.shadow-drop-left{animation:shadow-drop-left 0.4s linear both} @keyframes shadow-drop-left{0%{box-shadow:0 0 0 0 transparent}100%{box-shadow:-12px 0 20px -12px rgb(0, 0, 0)}}
+
+.shadow-drop-right{animation:shadow-drop-right 0.4s linear both} @keyframes shadow-drop-right{0%{box-shadow:0 0 0 0 transparent}100%{box-shadow:12px 0 20px -12px rgba(0,0,0)}}

@@ -1,4 +1,5 @@
 import { Typography } from "@material-tailwind/react";
+import LogoTipo from '../images/logo-no-background.png'
 
 const currentYear = new Date().getFullYear();
  
@@ -7,9 +8,7 @@ export function FooterWithSocialLinks() {
     <footer className="relative w-full">
       <div className="mx-auto w-full max-w-7xl px-8">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
-          <Typography variant="h5" className="mb-6">
-            Portfolio
-          </Typography>
+          <img className="w-52" src={LogoTipo} alt="logotipo" />
         </div>
         <div className="mt-12 flex w-full flex-col items-center justify-center border-t border-blue-gray-50 py-4 md:flex-row md:justify-between">
           <Typography
