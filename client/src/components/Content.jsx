@@ -2,8 +2,9 @@ import { CarouselCustomNavigation } from './Carousel.jsx'
 import { FooterWithSocialLinks } from './Footer.jsx'
 import { Proyects } from './Proyects.jsx'
 import Proyect1 from '../images/proyect1.png'
+import ProyectShopCart from '../images/tienda_carrito.png'
 import './Content.css'
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import { useObserver } from '../hooks/useObserver.js'
 
 export function Content () {
@@ -57,7 +58,7 @@ export function Content () {
                         </svg>
                     </div>
                     <div className='div-proyect py-6'>
-                        <Proyects title="Tienda con Carrito React + Vite" description="" src={Proyect1} link={'https://willowy-mermaid-f58654.netlify.app'}></Proyects>
+                        <Proyects title="Tienda con Carrito React + Vite" description="" src={ProyectShopCart} link={'https://willowy-mermaid-f58654.netlify.app'}></Proyects>
                         <Proyects title="Tienda con Carrito React + Vite" description="" src={Proyect1} link={'https://willowy-mermaid-f58654.netlify.app'}></Proyects>
                         <Proyects title="Tienda con Carrito React + Vite" description="" src={Proyect1} link={'https://willowy-mermaid-f58654.netlify.app'}></Proyects>
                         <Proyects title="Tienda con Carrito React + Vite" description="" src={Proyect1} link={'https://willowy-mermaid-f58654.netlify.app'}></Proyects>
