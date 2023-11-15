@@ -3,6 +3,9 @@ import { FooterWithSocialLinks } from './Footer.jsx'
 import { Proyects } from './Proyects.jsx'
 import Proyect1 from '../images/proyect1.png'
 import ProyectShopCart from '../images/tienda_carrito.png'
+import TicTacToe from '../images/tic_tac_toe.png'
+import MouseFollower from '../images/mouse_follower.png'
+import AppGatitos from '../images/app_gatitos.png'
 import './Content.css'
 import { useRef } from 'react'
 import { useObserver } from '../hooks/useObserver.js'
@@ -58,13 +61,13 @@ export function Content () {
                         </svg>
                     </div>
                     <div className='div-proyect py-6'>
-                        <Proyects title="Tienda con Carrito React + Vite" description="" src={ProyectShopCart} link={'https://willowy-mermaid-f58654.netlify.app'}></Proyects>
-                        <Proyects title="Tienda con Carrito React + Vite" description="" src={Proyect1} link={'https://willowy-mermaid-f58654.netlify.app'}></Proyects>
-                        <Proyects title="Tienda con Carrito React + Vite" description="" src={Proyect1} link={'https://willowy-mermaid-f58654.netlify.app'}></Proyects>
-                        <Proyects title="Tienda con Carrito React + Vite" description="" src={Proyect1} link={'https://willowy-mermaid-f58654.netlify.app'}></Proyects>
-                        <Proyects title="Tienda con Carrito React + Vite" description="" src={Proyect1} link={'https://willowy-mermaid-f58654.netlify.app'}></Proyects>
-                        <Proyects title="Tienda con Carrito React + Vite" description="" src={Proyect1} link={'https://willowy-mermaid-f58654.netlify.app'}></Proyects>
-                        <Proyects title="Tienda con Carrito React + Vite" description="" src={Proyect1} link={'https://willowy-mermaid-f58654.netlify.app'}></Proyects>
+                        <Proyects src={ProyectShopCart} link={'https://willowy-mermaid-f58654.netlify.app'}></Proyects>
+                        <Proyects src={TicTacToe} link={'https://tangerine-macaron-792ffd.netlify.app'}></Proyects>
+                        <Proyects src="" link={'#'}></Proyects>
+                        <Proyects src={MouseFollower} link={'https://symphonious-moxie-8c636e.netlify.app'}></Proyects>
+                        <Proyects src={AppGatitos} link={'https://chimerical-croissant-1afb91.netlify.app'}></Proyects>
+                        <Proyects src="" link={'#'}></Proyects>
+                        {/* <Proyects src={Proyect1} link={'#'}></Proyects> */}
                     </div>
                 </section>
                 <div></div>
