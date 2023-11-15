@@ -1,10 +1,21 @@
 import "./Navbar.css";
 import ImagoTipo from '../images/anderson-tovar-logo.png'
+import { switchTheme } from "../utils/utils.js";
+import { useState } from "react";
 
 export function Navbar() {
+  const [ theme, setTheme ] = useState(true)
+
+  const text = theme ? 'oscuro' : 'claro'
+
+  const handleClick = () => {
+    setTheme(!theme)
+    switchTheme()
+  }
+
   return (
     <>
-      <nav className="overflow-auto bg-white dark:bg-[#f4f4f2]">
+      <nav className="overflow-auto">
         <ul className="text-right p-16">
           <div className="flex justify-center align-middle">
             <img
@@ -13,12 +24,12 @@ export function Navbar() {
               alt="logo-portfolio"
             />
           </div>
-          <a className="hover:no-underline" href="#">
+          <a onClick={ handleClick } className="hover:no-underline">
             <li className="flex hover:bg-gradient-to-r hover:from-blue-700 shadow-drop-left slide-left cursor-pointer p-2">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
               </svg>
-              <span className="px-1">Tema oscuro</span>
+              <span className="px-1">Tema { text }</span>
             </li>
           </a>
           <a className="hover:no-underline" href="#">
