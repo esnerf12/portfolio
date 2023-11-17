@@ -16,7 +16,7 @@ export function Navbar() {
   return (
     <>
       <nav className="overflow-auto">
-        <ul className="text-right p-16">
+        <ul className="text-right p-10">
           <div className="flex justify-center align-middle">
             <img
               className="w-24 rounded-3xl py-6"

@@ -1,7 +1,53 @@
 .darkModeEnabled {
   background-color: rgb(12, 12, 23);
   color: white;
-}    
+}
+
+@media (max-width: 900px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    width: 250px !important;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    padding: 27px !important;
+  }
+
+  li {
+    display: flex;
+    justify-content: center !important;
+  }
+
+  nav span {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    width: 150px !important;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    padding: 27px !important;
+  }
+
+  li {
+    display: flex;
+    justify-content: center !important;
+  }
+
+  nav span {
+    display: none;
+  }
+}
 
 nav {
   height: 100%;
