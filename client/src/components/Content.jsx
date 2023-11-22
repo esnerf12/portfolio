@@ -1,6 +1,7 @@
 import { CarouselCustomNavigation } from './Carousel.jsx'
 import { FooterWithSocialLinks } from './Footer.jsx'
 import { Proyects } from './Proyects.jsx'
+import { Experience } from './Experience.jsx'
 import ProyectShopCart from '../images/tienda_carrito.png'
 import TicTacToe from '../images/tic_tac_toe.png'
 import MouseFollower from '../images/mouse_follower.png'
@@ -16,9 +17,9 @@ export function Content () {
 
     return (
         <>
-            <main>
+            <main className='bg-gradient-to-br from-blue-900'>
                 <div></div>
-                <section ref={containerRefHome} className='h-screen px-24 py-14 bg-gradient-to-br from-blue-900 dark:bg-blue-gray-900' id='home'>
+                <section ref={containerRefHome} className='h-screen px-24 py-14 dark:bg-blue-gray-900 backdrop-blur-sm' id='home'>
                     <div className='flex py-6 transform hover:scale-[1.035] transition duration-500' >
                         <h2 className='text-5xl cursor-pointer'>Inicio</h2>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 justify-end">
@@ -48,12 +49,13 @@ export function Content () {
                                 </svg>
                             </div>
                         </div>
-                        {/* <img className={ isVisibleHome ? 'jello-horizontal block w-72 rounded-full justify-end' : 'block w-72 rounded-full justify-end'} src={Avatar} alt="My avatar generated with: https://www.lightxeditor.com" /> */}
                     </div>
-                    <p className='text-end text-xl py-4 transform hover:scale-[1.035] transition duration-500'>Tengo <strong className='text-[#ff7832]'>2+</strong> años de experiencia como <strong className='text-yellow-400'>FullStack Developer</strong>, tengo la capacidad de desarrollar tanto el <strong className='text-blue-700 border-b-2 border-blue-700'>frontend</strong> como el <strong className='text-[#ff7832] border-b-2 border-[#ff7832]'>backend</strong> de las aplicaciones web, utilizando diferentes lenguajes, frameworks y herramientas.</p>
+                    <p className='text-end text-xl py-4 transform hover:scale-[1.035] transition duration-500'>Tengo <strong className='text-[#ff7832]'>+2</strong> años de experiencia como <strong className='text-yellow-400'>FullStack Developer</strong>, tengo la capacidad de desarrollar tanto el <strong className='text-blue-700 border-b-2 border-blue-700'>frontend</strong> como el <strong className='text-[#ff7832] border-b-2 border-[#ff7832]'>backend</strong> de las aplicaciones web, utilizando diferentes lenguajes, frameworks y herramientas.</p>
                 </section>
                 <div></div>
-                <section className='px-24 py-14 bg-gradient-to-tr from-blue-900' id='projects'>
+                <Experience></Experience>
+                <div></div>
+                <section className='px-24 py-14' id='projects'>
                     <div className='flex py-6 transform hover:scale-[1.035] transition duration-500'>
                         <h2 className='text-5xl cursor-pointer'>Proyectos</h2>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 justify-end">
@@ -71,7 +73,7 @@ export function Content () {
                     </div>
                 </section>
                 <div></div>
-                <section className='px-24 py-10 bg-gradient-to-br from-blue-900' id='about'>
+                <section className='px-24 py-10' id='about'>
                     <CarouselCustomNavigation></CarouselCustomNavigation>
                 </section>
                 <div></div>

@@ -8,6 +8,11 @@
   }
 }
 
+body {
+  background-color: rgb(12, 12, 23);
+  color: white;
+}
+
 main {
     display: grid;
     grid-template-columns: minmax(150px, 300px) minmax(auto, 1100px);

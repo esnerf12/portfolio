@@ -1,3 +1,3 @@
 export function switchTheme () {
-    document.body.classList.toggle('darkModeEnabled')
+    document.body.classList.toggle('lightModeEnabled')
 }

@@ -1,6 +1,6 @@
-.darkModeEnabled {
-  background-color: rgb(12, 12, 23);
-  color: white;
+.lightModeEnabled {
+  background-color: white;
+  color: black;
 }
 
 @media (max-width: 900px) {

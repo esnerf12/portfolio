@@ -6,7 +6,7 @@ import { useState } from "react";
 export function Navbar() {
   const [ theme, setTheme ] = useState(true)
 
-  const text = theme ? 'oscuro' : 'claro'
+  const text = theme ? 'claro' : 'oscuro'
 
   const handleClick = () => {
     setTheme(!theme)
@@ -15,7 +15,7 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="overflow-auto">
+      <nav className="overflow-auto bg-gradient-to-br from-gray-600">
         <ul className="text-right p-10">
           <div className="flex justify-center align-middle">
             <img
@@ -26,9 +26,15 @@ export function Navbar() {
           </div>
           <a onClick={ handleClick } className="hover:no-underline">
             <li className="flex hover:bg-gradient-to-r hover:from-blue-700 shadow-drop-left slide-left cursor-pointer p-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
-              </svg>
+              {
+                theme
+                ? <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 3V1m0 18v-2M5.05 5.05 3.636 3.636m12.728 12.728L14.95 14.95M3 10H1m18 0h-2M5.05 14.95l-1.414 1.414M16.364 3.636 14.95 5.05M14 10a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/>
+                  </svg>
+                : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                  </svg>
+              }
               <span className="px-1">Tema { text }</span>
             </li>
           </a>
@@ -45,6 +51,14 @@ export function Navbar() {
               <span className="px-1">Inicio</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+              </svg>
+            </li>
+          </a>
+          <a className="hover:no-underline" href="#experience">
+            <li className="flex justify-end hover:bg-gradient-to-l hover:from-[#ff7832] slide-right cursor-pointer p-2">
+              <span className="px-1">Experiencia</span>
+              <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5v10M3 5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm12 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0V6a3 3 0 0 0-3-3H9m1.5-2-2 2 2 2"/>
               </svg>
             </li>
           </a>
