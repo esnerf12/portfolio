@@ -1,4 +1,4 @@
-import "./Navbar.css";
+import "./css/Navbar.css";
 import ImagoTipo from '../images/anderson-tovar-logo.png'
 import { switchTheme } from "../utils/utils.js";
 import { useState } from "react";
@@ -15,6 +15,9 @@ export function Navbar() {
 
   return (
     <>
+    
+      <div className="progress"></div>
+
       <nav className="overflow-auto bg-gradient-to-br from-gray-600">
         <ul className="text-right p-10">
           <div className="flex justify-center align-middle">
