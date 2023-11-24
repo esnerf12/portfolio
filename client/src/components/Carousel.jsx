@@ -30,7 +30,7 @@ export function CarouselCustomNavigation() {
             <Typography
               variant="h1"
               color="white"
-              className="inline-block py-6 mb-4 text-3xl md:text-4xl lg:text-5xl"
+              className="inline-block py-6 mb-4 text-2xl md:text-3xl lg:text-5xl"
             >
               Sobre mí
             </Typography>
@@ -42,7 +42,7 @@ export function CarouselCustomNavigation() {
             <Typography
               variant="lead"
               color="white"
-              className="mb-12 text-xl md:text-xl"
+              className="mb-12 text-lg md:text-xl"
             >
               En realidad soy un Astronauta 🧑‍🚀
             </Typography>
@@ -61,7 +61,7 @@ export function CarouselCustomNavigation() {
             <Typography
               variant="h1"
               color="white"
-              className="inline-block py-6 mb-4 text-3xl md:text-4xl lg:text-5xl"
+              className="inline-block py-6 mb-4 text-2xl md:text-4xl lg:text-5xl"
             >
               En realidad no... 😂😂
             </Typography>
@@ -73,7 +73,7 @@ export function CarouselCustomNavigation() {
             <Typography
               variant="lead"
               color="white"
-              className="mb-12 text-xl md:text-xl"
+              className="mb-12 text-lg md:text-xl"
             >
               Además de programar me gusta mucho hacer ejercicio, soy aficionado a la calistenia y entreno a diario. 💪💪
             </Typography>
@@ -92,7 +92,7 @@ export function CarouselCustomNavigation() {
             <Typography
               variant="h1"
               color="white"
-              className="inline-block py-6 mb-4 text-3xl md:text-4xl lg:text-5xl"
+              className="inline-block py-6 mb-4 text-2xl md:text-4xl lg:text-5xl"
             >
               Me gusta la AI 🤖
             </Typography>
@@ -104,7 +104,7 @@ export function CarouselCustomNavigation() {
             <Typography
               variant="lead"
               color="white"
-              className="mb-12 text-xl md:text-xl"
+              className="mb-12 text-lg md:text-xl"
             >
               Me interesa bastante el tema de la inteligencia artificial, proximamente tendré muchos proyectos sobre AI en este portafolio. 🚀
             </Typography>
