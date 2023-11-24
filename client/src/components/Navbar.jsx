@@ -25,7 +25,7 @@ export function Navbar() {
     
       <div className="progress"></div>
 
-      <nav className={ button ? "overflow-auto bg-gradient-to-br from-gray-600 md:block" : "navbarResponsive md:flex flex-col overflow-auto bg-gradient-to-br from-gray-600 hidden" }>
+      <nav className={ button ? "nav overflow-auto bg-gradient-to-br from-gray-600 md:block" : "nav navbarResponsive md:flex flex-col overflow-auto bg-gradient-to-br from-gray-600 hidden" }>
         <div className="flex justify-end px-4">
           <div className="cursor-pointer" onClick={ handleButton }>
             <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
