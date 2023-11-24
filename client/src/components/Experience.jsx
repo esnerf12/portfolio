@@ -11,17 +11,17 @@ import {
 export function Experience () {
     return (
         <>
-            <section className="px-24 py-14" id="experience">
+            <section className="flex flex-col justify-center gap-8 md:gap-0" id="experience">
                 <div className='flex justify-start py-6'>
-                    <h2 className='text-5xl'>Experiencia</h2>
+                    <h2 className='text-3xl md:text-5xl'>Experiencia</h2>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 justify-end">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 4.5l-15 15m0 0h11.25m-11.25 0V8.25" />
                     </svg>
                 </div>
                 <div className="flex flex-col justify-center items-center">
-                    <div className="w-[32rem] py-14">
+                    <div className="md:w-[32rem] md:py-14">
                         <Timeline>
-                            <TimelineItem>
+                            <TimelineItem className="experience">
                             <TimelineConnector />
                             <TimelineHeader className="h-3">
                                 <TimelineIcon />

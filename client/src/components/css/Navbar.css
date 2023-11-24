@@ -3,7 +3,7 @@
   color: black;
 }
 
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   nav {
     display: flex;
     justify-content: center;
@@ -47,6 +47,31 @@
   nav span {
     display: none;
   }
+} */
+
+.navbarResponsive {
+  display: flex;
+  justify-content: center;
+  width: 150px !important;
+}
+
+.navbarResponsive ul {
+  display: flex;
+  flex-direction: column;
+  padding: 27px !important;
+}
+
+.navbarResponsive li {
+  display: flex;
+  justify-content: center !important;
+}
+
+.navbarResponsive span {
+  display: none;
+}
+
+.navbarResponsive :first-child {
+  justify-content: center;
 }
 
 nav {

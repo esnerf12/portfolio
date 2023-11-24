@@ -3,7 +3,7 @@ export function Proyects ({ src, link }) {
         <>
             <div className='cursor-pointer'>
                 <a href={link}>
-                    <img className='rounded-2xl w-screen h-full' src={src} alt="example" />
+                    <img className='projects rounded-2xl w-screen h-full' src={src} alt="example" />
                 </a>
             </div>
         </>

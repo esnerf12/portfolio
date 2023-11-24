@@ -5,12 +5,19 @@ import { useState } from "react";
 
 export function Navbar() {
   const [ theme, setTheme ] = useState(true)
+  const [ button, setButton ] = useState(false)
 
   const text = theme ? 'claro' : 'oscuro'
 
   const handleClick = () => {
-    setTheme(!theme)
+    const newTheme = !theme
+    setTheme(newTheme)
     switchTheme()
+  }
+
+  const handleButton = () => {
+    const newButton = !button
+    setButton(newButton)
   }
 
   return (
@@ -18,8 +25,15 @@ export function Navbar() {
     
       <div className="progress"></div>
 
-      <nav className="overflow-auto bg-gradient-to-br from-gray-600">
-        <ul className="text-right p-10">
+      <nav className={ button ? "overflow-auto bg-gradient-to-br from-gray-600 md:block" : "navbarResponsive md:flex flex-col overflow-auto bg-gradient-to-br from-gray-600 hidden" }>
+        <div className="flex justify-end px-4">
+          <div className="cursor-pointer" onClick={ handleButton }>
+            <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+          </div>
+        </div>
+        <ul className='text-right p-10'>
           <div className="flex justify-center align-middle">
             <img
               className="w-24 rounded-3xl py-6"
