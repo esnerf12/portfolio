@@ -28,7 +28,7 @@ export function FooterWithSocialLinks() {
                 />
               </svg>
             </Typography>
-            <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
+            <Typography as="a" href="https://www.instagram.com/anderbars_sw/" className="opacity-80 transition-opacity hover:opacity-100">
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   fillRule="evenodd"
