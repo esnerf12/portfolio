@@ -1,5 +1,6 @@
 import "./css/Navbar.css";
 import ImagoTipo from '../images/anderson-tovar-logo.png'
+// import FotoPerfil from '../images/perfil.jpeg'
 import { switchTheme } from "../utils/utils.js";
 import { useState } from "react";
 
@@ -87,14 +88,6 @@ export function Navbar() {
               </svg>
             </li>
           </a>
-          <a className="hover:no-underline" href="#about">
-            <li className="flex justify-end hover:bg-gradient-to-l hover:from-[#ff7832] slide-right cursor-pointer p-2">
-              <span className="px-1">Sobre mí</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-              </svg>
-            </li>
-          </a>
           <a className="hover:no-underline" href="#contact">
             <li className="flex justify-end hover:bg-gradient-to-l hover:from-[#ff7832] slide-right cursor-pointer p-2">
               <span className="px-1">Contacto</span>
@@ -103,7 +96,6 @@ export function Navbar() {
               </svg>
             </li>
           </a>
-          
           <a className="hover:no-underline" href="https://github.com/esnerf12">
             <li className="flex align-bottom cursor-pointer shadow-drop-left slide-left hover:bg-gradient-to-r hover:from-blue-700 p-2">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

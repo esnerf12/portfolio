@@ -107,9 +107,9 @@ a:hover {
   text-decoration: underline;
 }
 
-.slide-left:hover{animation:slide-left 0.1s linear both}@keyframes slide-left{0%{transform:translateX(0)}100%{transform:translateX(-25px)}}
+.slide-left:hover{animation:slide-left 0.1s linear both}@keyframes slide-left{0%{transform:translateX(0)}100%{transform:translateX(-15px)}}
 
-.slide-right:hover{animation:slide-right 0.1s linear both}@keyframes slide-right{0%{transform:translateX(0)}100%{transform:translateX(25px)}}
+.slide-right:hover{animation:slide-right 0.1s linear both}@keyframes slide-right{0%{transform:translateX(0)}100%{transform:translateX(15px)}}
 
 .shadow-drop-left{animation:shadow-drop-left 0.4s linear both} @keyframes shadow-drop-left{0%{box-shadow:0 0 0 0 transparent}100%{box-shadow:-12px 0 20px -12px rgb(0, 0, 0)}}
 

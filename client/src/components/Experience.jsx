@@ -25,16 +25,22 @@ export function Experience () {
                             <TimelineConnector />
                             <TimelineHeader className="h-3">
                                 <TimelineIcon />
-                                <Typography variant="h6" className="leading-none">
-                                Subgerente de Desarrollo <span className="text-blue-500 border-b-2 border-blue-500">(2021 - Actualidad)</span>
+                                <Typography variant="h6" className="leading-none text-lg">
+                                Subgerente de Desarrollo <span className="text-[#ff7832]">(2021 - Actualidad)</span>
                                 </Typography>
                             </TimelineHeader>
                             <TimelineBody className="pb-8">
-                                <Typography variant="h6" className="leading-none text-[#ff7832] pb-1 text-base">
-                                    Corporación Nacional de Alimentación Escolar.
+                                <Typography variant="h6" className="leading-none pb-2 pt-1 text-base">
+                                    MPPE / <span className="text-[#ff7832]">Corporación Nacional de Alimentación Escolar.</span>
+                                </Typography>
+                                <Typography variant="small" className="font-normal text-gray-200 pb-3">
+                                    Como Subgerente de Desarrollo, soy responsable de liderar y supervisar el proceso de creación de productos de software que satisfagan las necesidades y expectativas de la empresa.
+                                </Typography>
+                                <Typography variant="small" className="font-normal text-gray-200 pb-3">
+                                    Para ello, participo activamente en el análisis, diseño y desarrollo de sistemas, utilizando metodologías ágiles y buenas prácticas de programación.
                                 </Typography>
                                 <Typography variant="small" className="font-normal text-gray-200">
-                                Como Subgerente de Desarrollo, soy responsable de liderar y supervisar el proceso de creación de productos de software que satisfagan las necesidades y expectativas de la empresa. Para ello, participo activamente en el análisis, diseño y desarrollo de sistemas, utilizando metodologías ágiles y buenas prácticas de programación. Mi rol implica también coordinar y gestionar el trabajo de un equipo de desarrolladores, asignando tareas, brindando feedback y aportando soluciones.
+                                    Mi rol implica también coordinar y gestionar el trabajo de un equipo de desarrolladores, asignando tareas, brindando feedback y aportando soluciones.
                                 </Typography>
                             </TimelineBody>
                             </TimelineItem>
