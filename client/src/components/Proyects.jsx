@@ -1,4 +1,4 @@
-export function Proyects ({ src, link, icons }) {
+export function Proyects ({ src, link, icons, description }) {
     return (
         <>
             <div className="flex flex-col gap-5 h-auto md:p-10">
@@ -7,7 +7,7 @@ export function Proyects ({ src, link, icons }) {
                 </div>
                 <div className="p-2">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta odit aliquam corporis beatae, voluptas molestias inventore! Repudiandae, eaque recusandae nobis perspiciatis cupiditate necessitatibus explicabo. Quis natus omnis tempora eligendi aut?
+                        {description}
                     </p>
                 </div>
                 <div className="flex gap-4 mx-2">

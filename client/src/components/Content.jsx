@@ -10,9 +10,23 @@ import ViteIcon from '../images/icons/vitejs.svg'
 import ReactIcon from '../images/icons/react.svg'
 import Figma from '../images/icons/figma.svg'
 import NodeJs from '../images/icons/nodejs.svg'
+import emailjs from '@emailjs/browser'
 import './css/Content.css'
+import { useState } from 'react'
 
 export function Content () {
+
+    const [ send, setSend] = useState(false)
+
+    const sendEmail = (e) => {
+        e.preventDefault()
+
+        emailjs.sendForm('service_dijc10n', 'template_7yxxas7', e.target, 'ic6wKw0y9Ld9d_z3t')
+
+        const newSend = !send
+        setSend(newSend)
+    }
+
     return (
         <>
             <main className='flex flex-col md:gap-5 bg-gradient-to-br from-blue-900 md:px-60'>
@@ -46,23 +60,47 @@ export function Content () {
                         </svg>
                     </div>
                     <div className='md:grid md:grid-cols-2 md:gap-2 flex flex-col gap-10 py-6'>
-                        <Proyects src={ProyectShopCart} link={'https://willowy-mermaid-f58654.netlify.app'} icons={
+                        <Proyects 
+                            src={ProyectShopCart} 
+                            description={
+                                <>
+                                    <span>Esta app web es producto de una prueba tecnica con <a className='text-[#ff7832]' href="https://www.instagram.com/midu.dev/?hl=es">@midudev</a>. Un muy buen ejemplo para aplicar los hooks useContext y useReducer en React.</span>
+                                </>
+                            } 
+                            link={'https://willowy-mermaid-f58654.netlify.app'} 
+                            icons={
                             <>
                                 <img className='w-6 h-6' src={ReactIcon} alt="react" />
                                 <img className='w-6 h-6' src={ViteIcon} alt="vite" />
                             </>
                         }></Proyects>
-                        <Proyects src={TicTacToe} link={'https://tangerine-macaron-792ffd.netlify.app'} icons={
-                            <>
-                                <img className='w-6 h-6' src={ReactIcon} alt="react" />
-                                <img className='w-6 h-6' src={ViteIcon} alt="vite" />
-                            </>
+                        <Proyects 
+                            src={TicTacToe} 
+                            link={'https://tangerine-macaron-792ffd.netlify.app'}
+                            description={
+                                <>
+                                    <span>Juego Tic Tac Toe realizado con React y Localstorage.</span>
+                                </>
+                            }
+                            icons={
+                                <>
+                                    <img className='w-6 h-6' src={ReactIcon} alt="react" />
+                                    <img className='w-6 h-6' src={ViteIcon} alt="vite" />
+                                </>
                         }></Proyects>
-                        <Proyects src={EjamProject} link={'https://thunderous-biscuit-564875.netlify.app'} icons={
-                            <>
-                                <img className='w-6 h-6' src={ReactIcon} alt="react" />
-                                <img className='w-6 h-6' src={Figma} alt="react" />
-                            </>
+                        <Proyects 
+                            src={EjamProject} 
+                            link={'https://thunderous-biscuit-564875.netlify.app'}
+                            description={
+                                <>
+                                    <span>Prueba técnica donde se realizó una maquetación web producto de un diseño en Figma.</span>
+                                </>
+                            }
+                            icons={
+                                <>
+                                    <img className='w-6 h-6' src={ReactIcon} alt="react" />
+                                    <img className='w-6 h-6' src={Figma} alt="react" />
+                                </>
                         }></Proyects>
                         <Proyects src={MouseFollower} link={'https://symphonious-moxie-8c636e.netlify.app'} icons={
                             <>
@@ -78,7 +116,28 @@ export function Content () {
                     </div>
                 </section>
                 <section id='contact'>
-
+                    <div className='flex py-6'>
+                        <h2 className='text-3xl md:text-5xl'>Contacto</h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 justify-end">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 4.5l-15 15m0 0h11.25m-11.25 0V8.25" />
+                        </svg>
+                    </div>
+                    <div className="md:px-10 py-8">
+                        {
+                            send
+                            ? <span className='bg-green-300'>Mensaje enviado con exito!</span>
+                            : ''
+                        }
+                        <form onSubmit={sendEmail} className="flex flex-col gap-3">
+                            <label htmlFor="emailFrom">Email:</label>
+                            <input type="text" name="email" id="emailFrom" className="text-black p-2" placeholder="persona@example.com" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" required/>
+                            <label htmlFor="message">Mensaje:</label>
+                            <textarea name="message" id="message" className="text-black p-2" maxLength="500" placeholder='Gran portafolio 😀' required></textarea>
+                            <button className="bg-[#ff7832] hover:scale-105 transition-all p-2">
+                                Enviar
+                            </button>
+                        </form>
+                    </div>
                 </section>
                 <section>
                     <FooterWithSocialLinks></FooterWithSocialLinks>

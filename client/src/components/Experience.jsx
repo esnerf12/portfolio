@@ -25,12 +25,12 @@ export function Experience () {
                             <TimelineConnector />
                             <TimelineHeader className="h-3">
                                 <TimelineIcon />
-                                <Typography variant="h6" className="leading-none text-lg">
+                                <Typography variant="h6" className="leading-none text-sm md:text-lg pb-4">
                                 Subgerente de Desarrollo <span className="text-[#ff7832]">(2021 - Actualidad)</span>
                                 </Typography>
                             </TimelineHeader>
                             <TimelineBody className="pb-8">
-                                <Typography variant="h6" className="leading-none pb-2 pt-1 text-base">
+                                <Typography variant="h6" className="leading-none pb-2 pt-1 text-sm md:text-base">
                                     MPPE / <span className="text-[#ff7832]">Corporación Nacional de Alimentación Escolar.</span>
                                 </Typography>
                                 <Typography variant="small" className="font-normal text-gray-200 pb-3">
